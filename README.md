@@ -65,3 +65,20 @@ Doctor / Nurse Dashboard
 ## Project Guide
 
 Sumit Badase Sir
+
+## Existing Solutions
+
+We studied existing patient monitoring systems to understand their
+features and limitations.
+
+| Existing Solution | Features | Limitations |
+|---|---|---|
+| IoT Patient Monitoring | Monitors patient vital signs | Limited contextual analysis |
+| Remote Patient Monitoring | Enables remote monitoring | Depends on network connectivity |
+| AI-Based Patient Monitoring | Uses AI for analysis | Requires quality patient data |
+
+## Research Gap
+
+Existing systems mainly focus on monitoring individual patient
+parameters. Our proposed system aims to combine patient data,
+patient history, and contextual information for better monitoring.
