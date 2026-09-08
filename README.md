@@ -82,3 +82,66 @@ features and limitations.
 Existing systems mainly focus on monitoring individual patient
 parameters. Our proposed system aims to combine patient data,
 patient history, and contextual information for better monitoring.
+
+## Existing Solutions
+
+We studied existing patient monitoring solutions to understand
+their features, technologies, and limitations.
+
+### 1. Remote Patient Monitoring
+
+**Features:**
+- Remote monitoring of patients
+- Collection of vital signs
+- Healthcare professionals can monitor patients remotely
+
+**Limitations:**
+- Depends on internet connectivity
+- Limited contextual understanding of patient conditions
+
+### 2. IoT-Based Patient Monitoring
+
+**Features:**
+- Uses sensors to collect patient data
+- Monitors parameters such as heart rate and temperature
+- Real-time data collection
+
+**Limitations:**
+- Multiple sensor data can be difficult to manage
+- Limited intelligent interpretation of context
+
+### 3. AI-Based Patient Monitoring
+
+**Features:**
+- Uses Artificial Intelligence for patient-data analysis
+- Can identify abnormal patterns
+- Provides automated analysis
+
+**Limitations:**
+- Requires sufficient and reliable training data
+- May not consider complete patient context
+
+## Comparison
+
+| Existing Solution | Main Features | Limitations |
+|---|---|---|
+| Remote Patient Monitoring | Remote monitoring, vital signs | Internet dependency |
+| IoT Patient Monitoring | Sensors, real-time monitoring | Limited contextual analysis |
+| AI Patient Monitoring | AI-based analysis | Data and model dependency |
+
+## Research Gap
+
+Existing patient monitoring systems mainly focus on collecting
+and monitoring individual patient parameters. They may not
+combine patient history, real-time measurements, and contextual
+information effectively.
+
+Our proposed **Patient Monitoring Context OS** aims to address
+this gap by providing context-aware patient monitoring and
+intelligent interpretation of patient information.
+
+## Proposed Solution
+
+The proposed system will integrate patient information,
+monitoring data, and contextual information to provide a more
+comprehensive view of the patient's condition.
