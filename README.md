@@ -594,7 +594,7 @@ Future improvements may include:
 | Member              | Contribution                                                                     |
 | ------------------- | -------------------------------------------------------------------------------- |
 | **Vaibhav Dhale**   | Patient Monitoring Context OS development, system integration and implementation |
-| **Project Partner** | Project development, testing and integration                                     |
+| **Gunjan Mahajan** | Project development, testing and integration                                     |
 
 ### Team Contribution
 
