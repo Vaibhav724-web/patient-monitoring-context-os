@@ -216,3 +216,31 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Vim
+*.swp
+*.swo
+
+# Backup files
+*.backup
+
+# Kafka installation
+kafka/
+kafka/kafka_2.13-4.2.1/logs/
+kafka/kafka_2.13-4.2.1/libs/
+kafka/kafka_2.13-4.2.1/site-docs/
+
+# Kafka generated/runtime data
+kafka/kafka_2.13-4.2.1/data/
+kafka/kafka_2.13-4.2.1/tmp/
+
+# RAG generated files
+rag/faiss.index
+rag/metadata.pkl
+

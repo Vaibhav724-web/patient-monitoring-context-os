@@ -1,0 +1,38 @@
+Heart Rate Monitoring
+
+For many resting adults, a heart rate above 100 beats per minute is commonly considered tachycardia. Interpretation depends on age, activity, medications, and clinical condition. Heart rate should be evaluated together with other patient information.
+
+
+Oxygen Saturation Monitoring
+
+SpO2 represents peripheral oxygen saturation. In many adult clinical contexts, values below 94 percent may be considered low, although target ranges can vary depending on the patient's condition and clinical setting. SpO2 should be interpreted together with symptoms and other vital signs.
+
+
+Temperature Monitoring
+
+A body temperature above 38 degrees Celsius is commonly considered fever in adults. Temperature should be interpreted according to measurement method, patient condition, and clinical context.
+
+
+Blood Pressure Monitoring
+
+For adults, a systolic blood pressure of 140 mmHg or higher is commonly considered elevated or high under commonly used blood pressure categories. Blood pressure interpretation should consider repeated measurements and clinical context.
+
+
+Multiple Vital Sign Alerts
+
+Multiple abnormal vital signs occurring together may indicate that a patient requires closer clinical attention. Automated monitoring alerts are decision-support signals and should not be treated as a diagnosis.
+
+
+Context-Aware Patient Monitoring
+
+A context-aware patient monitoring system combines real-time vital signs, patient location, historical information, and relevant reference knowledge. Combining current and historical context can provide healthcare professionals with a more comprehensive view of the monitored patient.
+
+
+Retrieval-Augmented Generation
+
+Retrieval-Augmented Generation, or RAG, retrieves relevant information from a knowledge base before providing context to an AI model. The retrieved information can help the AI system produce responses grounded in the available reference material.
+
+
+FAISS Vector Search
+
+FAISS is a library for efficient similarity search. In a RAG system, knowledge documents can be converted into numerical vectors and stored in a FAISS index. A user query can then be converted into a vector and compared with stored vectors to retrieve relevant information.

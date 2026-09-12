@@ -1,6 +1,14 @@
 import json
 import time
 from datetime import datetime
+from kafka import KafkaProducer
+
+
+# Connect to Kafka
+producer = KafkaProducer(
+    bootstrap_servers="localhost:9092",
+    value_serializer=lambda v: json.dumps(v).encode("utf-8")
+)
 
 
 def generate_patient_data():
@@ -19,6 +27,10 @@ def generate_patient_data():
 while True:
     patient_data = generate_patient_data()
 
+    producer.send("patient-vitals", patient_data)
+    producer.flush()
+
+    print("Sent to Kafka:")
     print(json.dumps(patient_data, indent=2))
 
     time.sleep(5)

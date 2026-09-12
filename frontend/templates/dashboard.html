@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Monitoring Dashboard</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .status {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .alert {
+            color: #b00020;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        td:first-child {
+            font-weight: bold;
+            width: 30%;
+        }
+
+        .alerts {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🩺 Patient Monitoring Dashboard</h1>
+
+    {% if context.error %}
+
+        <div class="card">
+            <h2>API Error</h2>
+            <p>{{ context.error }}</p>
+        </div>
+
+    {% else %}
+
+        <div class="card">
+
+            <h2>Patient {{ context.patient_id }}</h2>
+
+            <p class="status">
+                Status:
+                <span class="alert">
+                    {{ context.status }}
+                </span>
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Patient Context</h2>
+
+            <table>
+
+                <tr>
+                    <td>Patient ID</td>
+                    <td>{{ context.patient_id }}</td>
+                </tr>
+
+                <tr>
+                    <td>Location</td>
+                    <td>{{ context.location }}</td>
+                </tr>
+
+                <tr>
+                    <td>Timestamp</td>
+                    <td>{{ context.timestamp }}</td>
+                </tr>
+
+                <tr>
+                    <td>Status</td>
+                    <td>{{ context.status }}</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <div class="card">
+
+            <h2>⚠️ Alerts</h2>
+
+            <ul class="alerts">
+
+                {% for alert in context.alerts %}
+                    <li class="alert">{{ alert }}</li>
+                {% endfor %}
+
+            </ul>
+
+        </div>
+
+        <div class="card">
+
+            <h2>🤖 AI Contextual Assessment</h2>
+
+            {% if ai_assessment.error %}
+
+                <p>{{ ai_assessment.error }}</p>
+
+            {% else %}
+
+                <pre style="
+                    white-space: pre-wrap;
+                    font-family: Arial, sans-serif;
+                    line-height: 1.6;
+                ">{{ ai_assessment.assessment }}</pre>
+
+            {% endif %}
+
+        </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>
+</div>
+
+</body>
+</html>
