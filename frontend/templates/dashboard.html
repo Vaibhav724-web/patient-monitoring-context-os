@@ -90,29 +90,46 @@
         <div class="card">
 
             <h2>Patient Context</h2>
-
             <table>
+            <tr>
+    <td>Patient ID</td>
+    <td>{{ context.patient_id }}</td>
+</tr>
 
-                <tr>
-                    <td>Patient ID</td>
-                    <td>{{ context.patient_id }}</td>
-                </tr>
+<tr>
+    <td>Heart Rate</td>
+    <td>{{ latest_vitals.heart_rate }} bpm</td>
+</tr>
 
-                <tr>
-                    <td>Location</td>
-                    <td>{{ context.location }}</td>
-                </tr>
+<tr>
+    <td>SpO2</td>
+    <td>{{ latest_vitals.spo2 }} %</td>
+</tr>
 
-                <tr>
-                    <td>Timestamp</td>
-                    <td>{{ context.timestamp }}</td>
-                </tr>
+<tr>
+    <td>Temperature</td>
+    <td>{{ latest_vitals.temperature }} °C</td>
+</tr>
 
-                <tr>
-                    <td>Status</td>
-                    <td>{{ context.status }}</td>
-                </tr>
+<tr>
+    <td>Blood Pressure</td>
+    <td>{{ latest_vitals.blood_pressure }} mmHg</td>
+</tr>
 
+<tr>
+    <td>Location</td>
+    <td>{{ context.location }}</td>
+</tr>
+
+<tr>
+    <td>Timestamp</td>
+    <td>{{ context.timestamp }}</td>
+</tr>
+
+<tr>
+    <td>Status</td>
+    <td>{{ context.status }}</td>
+</tr>
             </table>
 
         </div>
@@ -157,7 +174,4 @@
 
 </body>
 </html>
-</div>
 
-</body>
-</html>

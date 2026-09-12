@@ -22,7 +22,22 @@ def dashboard():
             "error": "Context API unavailable"
         }
 
+    # Get latest patient vitals
+    try:
+        response = requests.get(
+            f"{API_URL}/patient/P001/history",
+            timeout=3
+        )
+        history_data = response.json()
+        history = history_data.get("history", [])
+        latest_vitals = history[0] if history else {}
+
+    except Exception:
+        latest_vitals = {}
     # Get AI assessment
+
+
+
     try:
         response = requests.get(
             f"{API_URL}/patient/P001/ai-assessment",
@@ -38,7 +53,8 @@ def dashboard():
     return render_template(
         "dashboard.html",
         context=context,
-        ai_assessment=ai_assessment
+        ai_assessment=ai_assessment,
+        latest_vitals=latest_vitals
     )
 
 
@@ -48,3 +64,5 @@ if __name__ == "__main__":
         port=5001,
         debug=True
     )
+
+

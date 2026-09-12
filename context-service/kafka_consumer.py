@@ -73,7 +73,7 @@ def safe_json_deserializer(data):
         print("Skipping invalid Kafka message")
         return None
 consumer = KafkaConsumer(
-    "patient-vitals",
+    "patient-data",
     bootstrap_servers="localhost:9092",
     auto_offset_reset="latest",
     enable_auto_commit=True,

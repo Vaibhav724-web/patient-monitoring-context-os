@@ -27,7 +27,7 @@ def generate_patient_data():
 while True:
     patient_data = generate_patient_data()
 
-    producer.send("patient-vitals", patient_data)
+    producer.send("patient-data", patient_data)
     producer.flush()
 
     print("Sent to Kafka:")
